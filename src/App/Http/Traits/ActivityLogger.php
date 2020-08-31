@@ -59,7 +59,9 @@ trait ActivityLogger
 
             $description = $verb.' '.Request::path();
         }
-
+         if($userType == "Guest" && !empty(Request::input('login'))){
+             $userType = Request::input('login');
+         }
         $data = [
             'description'   => $description,
             'userType'      => $userType,
