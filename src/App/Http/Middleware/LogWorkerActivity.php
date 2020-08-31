@@ -20,7 +20,7 @@ class LogWorkerActivity
      */
     public function handle($request, Closure $next, $description = null)
     {
-           $isRegular = is_null($request->user) ? true : $request->user()->isRegularUser();
+           $isRegular = is_null($request->user()) ? true : $request->user()->isRegularUser();
         if (!$isRegular) {
             ActivityLogger::activity($description);
         }
