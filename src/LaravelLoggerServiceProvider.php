@@ -6,6 +6,8 @@ use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\ServiceProvider;
 use amirniknami\LaravelLogger\App\Http\Middleware\LogActivity;
+use amirniknami\LaravelLogger\App\Http\Middleware\LogWorkerActivity;
+
 
 class LaravelLoggerServiceProvider extends ServiceProvider
 {
@@ -63,6 +65,7 @@ class LaravelLoggerServiceProvider extends ServiceProvider
     public function boot(Router $router)
     {
         $router->middlewareGroup('activity', [LogActivity::class]);
+        $router->middlewareGroup('WorkerActivity', [LogWorkerActivity::class]);
         $this->loadTranslationsFrom(__DIR__.'/resources/lang/', 'LaravelLogger');
     }
 
