@@ -217,7 +217,7 @@ To use the trait:
 1. Include the call in the head of your class file:
 
 ```php
-    use jeremykenedy\LaravelLogger\App\Http\Traits\ActivityLogger;
+    use amirniknami\LaravelLogger\App\Http\Traits\ActivityLogger;
 ```
 
 2. Include the trait call in the opening of your class:
@@ -253,7 +253,7 @@ If you are on an existing install, you will also need update your `laravel-logge
 You can then add the routes directly to your application's `routes/web.php` file, and customise as required.
 
 ```php
-Route::group(['prefix' => 'activity', 'namespace' => 'jeremykenedy\LaravelLogger\App\Http\Controllers', 'middleware' => ['web', 'auth', 'activity']], function () {
+Route::group(['prefix' => 'activity', 'namespace' => 'amirniknami\LaravelLogger\App\Http\Controllers', 'middleware' => ['web', 'auth', 'activity']], function () {
 
     // Dashboards
     Route::get('/', 'LaravelLoggerController@showAccessLog')->name('activity');
