@@ -1,6 +1,6 @@
 {
-    "name": "amirniknami/laravel-logger",
-    "description": "Laravel Logger Package",
+    "name": "amirniknami/inverseschool-logger",
+    "description": "Laravel Logger Package for inverseschool",
     "keywords": [
             "Laravel activity",
             "Laravel activity logger",
