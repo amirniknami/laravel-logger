@@ -113,7 +113,7 @@ class Activity extends Model
      */
     public function user()
     {
-        return $this->hasOne(config('LaravelLogger.defaultUserModel'));
+        return $this->hasOne(config('LaravelLogger.defaultUserModel'),'id','userId');
     }
 
     /**
