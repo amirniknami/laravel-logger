@@ -1,5 +1,5 @@
 {
-    "name": "jeremykenedy/laravel-logger",
+    "name": "amirniknami/laravel-logger",
     "description": "Laravel Logger Package",
     "keywords": [
             "Laravel activity",
@@ -12,8 +12,8 @@
     "type": "package",
     "authors": [
         {
-            "name": "jeremykenedy",
-            "email": "jeremykenedy@gmail.com"
+            "name": "amirniknami",
+            "email": "amirniknami@gmail.com"
         }
     ],
     "minimum-stability": "dev",
@@ -24,7 +24,7 @@
     },
     "autoload": {
         "psr-4": {
-            "jeremykenedy\\LaravelLogger\\": "src/"
+            "amirniknami\\LaravelLogger\\": "src/"
         },
         "files": [
             "src/App/Logic/helpers.php"
@@ -33,7 +33,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "jeremykenedy\\LaravelLogger\\LaravelLoggerServiceProvider"
+                "amirniknami\\LaravelLogger\\LaravelLoggerServiceProvider"
             ]
         }
     },

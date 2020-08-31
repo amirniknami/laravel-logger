@@ -1,9 +1,9 @@
 <?php
 
-namespace jeremykenedy\LaravelLogger\App\Listeners;
+namespace amirniknami\LaravelLogger\App\Listeners;
 
 use Illuminate\Auth\Events\Authenticated;
-use jeremykenedy\LaravelLogger\App\Http\Traits\ActivityLogger;
+use amirniknami\LaravelLogger\App\Http\Traits\ActivityLogger;
 
 class LogAuthenticated
 {

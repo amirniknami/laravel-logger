@@ -1,11 +1,11 @@
 <?php
 
-namespace jeremykenedy\LaravelLogger;
+namespace amirniknami\LaravelLogger;
 
 use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\ServiceProvider;
-use jeremykenedy\LaravelLogger\App\Http\Middleware\LogActivity;
+use amirniknami\LaravelLogger\App\Http\Middleware\LogActivity;
 
 class LaravelLoggerServiceProvider extends ServiceProvider
 {
@@ -26,31 +26,31 @@ class LaravelLoggerServiceProvider extends ServiceProvider
     protected $listeners = [
 
         'Illuminate\Auth\Events\Attempting' => [
-            'jeremykenedy\LaravelLogger\App\Listeners\LogAuthenticationAttempt',
+            'amirniknami\LaravelLogger\App\Listeners\LogAuthenticationAttempt',
         ],
 
         'Illuminate\Auth\Events\Authenticated' => [
-            'jeremykenedy\LaravelLogger\App\Listeners\LogAuthenticated',
+            'amirniknami\LaravelLogger\App\Listeners\LogAuthenticated',
         ],
 
         'Illuminate\Auth\Events\Login' => [
-            'jeremykenedy\LaravelLogger\App\Listeners\LogSuccessfulLogin',
+            'amirniknami\LaravelLogger\App\Listeners\LogSuccessfulLogin',
         ],
 
         'Illuminate\Auth\Events\Failed' => [
-            'jeremykenedy\LaravelLogger\App\Listeners\LogFailedLogin',
+            'amirniknami\LaravelLogger\App\Listeners\LogFailedLogin',
         ],
 
         'Illuminate\Auth\Events\Logout' => [
-            'jeremykenedy\LaravelLogger\App\Listeners\LogSuccessfulLogout',
+            'amirniknami\LaravelLogger\App\Listeners\LogSuccessfulLogout',
         ],
 
         'Illuminate\Auth\Events\Lockout' => [
-            'jeremykenedy\LaravelLogger\App\Listeners\LogLockout',
+            'amirniknami\LaravelLogger\App\Listeners\LogLockout',
         ],
 
         'Illuminate\Auth\Events\PasswordReset' => [
-            'jeremykenedy\LaravelLogger\App\Listeners\LogPasswordReset',
+            'amirniknami\LaravelLogger\App\Listeners\LogPasswordReset',
         ],
 
     ];
