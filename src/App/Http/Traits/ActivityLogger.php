@@ -20,9 +20,14 @@ trait ActivityLogger
      */
     public static function activity($description = null)
     {
+         
+        if(Str::contains(Request::url(),'activity')) {
+            return true;
+        }
+
         $userType = trans('LaravelLogger::laravel-logger.userTypes.guest');
         $userId = null;
-
+         
         if (Auth::check()) {
             $userType = trans('LaravelLogger::laravel-logger.userTypes.registered');
             $userIdField = config('LaravelLogger.defaultUserIDField');
