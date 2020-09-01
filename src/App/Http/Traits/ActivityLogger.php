@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Validator;
 use Jaybizzle\LaravelCrawlerDetect\Facades\LaravelCrawlerDetect as Crawler;
 use amirniknami\LaravelLogger\App\Models\Activity;
+use Illuminate\Support\Str;
+
 
 trait ActivityLogger
 {
