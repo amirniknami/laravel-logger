@@ -27,10 +27,15 @@ class LaravelLoggerController extends BaseController
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(Request $request)
     {
+        
         $this->middleware('auth');
 
+        if($request->user()->access('view','Activity')){
+            abort("403");
+        }
+             
         $this->_rolesEnabled = config('LaravelLogger.rolesEnabled');
         $this->_rolesMiddlware = config('LaravelLogger.rolesMiddlware');
 
