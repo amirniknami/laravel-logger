@@ -8,8 +8,8 @@ return [
     |--------------------------------------------------------------------------
     */
 
-    'loggerDatabaseConnection'  => env('LARAVEL_LOGGER_DATABASE_CONNECTION', env('DB_CONNECTION', 'mysql')),
-    'loggerDatabaseTable'       => env('LARAVEL_LOGGER_DATABASE_TABLE', 'laravel_logger_activity'),
+    'loggerDatabaseConnection'  => "inverseschoolLogger",
+    'loggerDatabaseTable'       => "inverseschoolLogs",
 
     /*
     |--------------------------------------------------------------------------
