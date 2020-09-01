@@ -11,6 +11,7 @@ use Illuminate\Routing\Controller as BaseController;
 use amirniknami\LaravelLogger\App\Http\Traits\IpAddressDetails;
 use amirniknami\LaravelLogger\App\Http\Traits\UserAgentDetails;
 use amirniknami\LaravelLogger\App\Models\Activity;
+use App\Http\Middleware\ActivityAccess;
 
 class LaravelLoggerController extends BaseController
 {
@@ -30,7 +31,7 @@ class LaravelLoggerController extends BaseController
     public function __construct(Request $request)
     {
         
-        $this->middleware('auth');
+        $this->middleware(ActivityAccess::class);
 
         if($request->user()->access('view','Activity')){
             abort("403");
