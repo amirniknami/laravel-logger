@@ -23,10 +23,7 @@ trait ActivityLogger
     public static function activity($description = null)
     {
          
-        if(Str::contains(Request::url(),'activity')) {
-            return true;
-        }
-
+        
         if(Str::contains(Request::url(),'scripts')) {
             return true;
         }

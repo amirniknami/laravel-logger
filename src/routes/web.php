@@ -7,7 +7,7 @@
 |
 */
 
-Route::group(['prefix' => 'activity', 'namespace' => 'amirniknami\LaravelLogger\App\Http\Controllers', 'middleware' => ['web', 'auth', 'activity']], function () {
+Route::group(['prefix' => 'activity', 'namespace' => 'amirniknami\LaravelLogger\App\Http\Controllers', 'middleware' => ['web', 'auth']], function () {
 
     // Dashboards
     Route::get('/', 'LaravelLoggerController@showAccessLog')->name('activity');
