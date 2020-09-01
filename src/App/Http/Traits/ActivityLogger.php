@@ -27,6 +27,14 @@ trait ActivityLogger
             return true;
         }
 
+        if(Str::contains(Request::url(),'scripts')) {
+            return true;
+        }
+
+        if(Str::contains(Request::url(),'styles')) {
+            return true;
+        }
+
         $userType = trans('LaravelLogger::laravel-logger.userTypes.guest');
         $userId = null;
          
